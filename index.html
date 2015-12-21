@@ -1,7 +1,20 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    
+    $(document).ready(function(){
+    $("button").click(function(){
+            $("h1").hide();
+        });
+    });
+
+ </head> 
+  
 <body>
 <h1 data-localize="greeting"> Hello! </h1>
+
+<button>Click me</button>
 <form action="action_page.php">
   First name:<br>
   <input type="text" name="firstname" value="">
