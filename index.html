@@ -9,7 +9,11 @@
         $("button").click(function(){
                 $("[data-localize]").localize("language", { language: "fr" });
                 
-                alert( "hafdafa " + $.localize.data.PACKAGE.KEY);
+                $("[data-localize]").localize("language", { 
+                        callback: function(data, defaultCallback) {
+                            console.log(data.KEY); // <-- do whatever here
+                            defaultCallback(data);
+                    }});
             });
         });
   </script>
